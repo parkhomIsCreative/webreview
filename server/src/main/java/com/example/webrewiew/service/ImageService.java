@@ -54,7 +54,6 @@ public class ImageService {
             imageRepository.delete(userProfileImage);
         }
 
-        CloudinaryUpload cloudinaryUpload = new CloudinaryUpload();
         ImageModel imageModel = new ImageModel();
         imageModel.setUserid(user.getId());
         imageModel.setImageURL(uploadFile(file));
@@ -70,7 +69,6 @@ public class ImageService {
                     .filter(p -> p.getId().equals(postId))
                     .collect(toSinglePostCollector());
 
-            CloudinaryUpload cloudinaryUpload = new CloudinaryUpload();
             ImageModel imageModel = new ImageModel();
             imageModel.setPostid(post.getId());
             imageModel.setImageURL(uploadFile(file));
