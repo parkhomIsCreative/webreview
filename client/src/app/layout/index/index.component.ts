@@ -99,11 +99,4 @@ export class IndexComponent implements OnInit {
       });
   }
 
-  formatImage(img: any): any {
-    if (img == null) {
-      return null;
-    }
-    return 'data:image/jpeg;base64,' + img;
-  }
-
 }
