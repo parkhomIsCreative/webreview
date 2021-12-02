@@ -89,10 +89,10 @@ export class IndexComponent implements OnInit {
     }
   }
 
-  postComment(message: string, postId: number, postIndex: number): void {
+  postComment(message: any, postId: number, postIndex: number): void {
     const post = this.posts![postIndex];
     console.log(post);
-    this.commentService.addCommentToPost(postId, message)
+    this.commentService.addCommentToPost(postId, message.target.value)
       .subscribe(data => {
         console.log(data);
         post.comments!.push(data);
