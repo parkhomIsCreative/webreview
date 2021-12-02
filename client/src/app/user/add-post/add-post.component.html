@@ -17,12 +17,13 @@
 
     <button mat-button (click)="fileInput.click()">Pick File</button>
 
-    <mat-form-field  class="w-100" appearance="outline">
+    <mat-form-field class="w-100" appearance="outline">
       <mat-label>Title</mat-label>
       <input matInput
              formControlName="title">
     </mat-form-field>
-    <mat-form-field  class="w-100" appearance="outline">
+
+    <mat-form-field class="w-100" appearance="outline">
       <mat-label>Group</mat-label>
       <mat-select formControlName="postgroup">
         <mat-option value="Film">Film</mat-option>
@@ -30,11 +31,7 @@
         <mat-option value="Book">Book</mat-option>
       </mat-select>
     </mat-form-field>
-
-
-
-
-
+    
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Textarea</mat-label>
       <textarea matInput></textarea>
