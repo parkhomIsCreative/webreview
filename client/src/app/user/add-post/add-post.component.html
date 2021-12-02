@@ -3,10 +3,12 @@
     <button mat-flat-button color="primary" routerLink="/profile">My Reviews</button>
   </div>
 
-  <h2>Create Post</h2>
+  <h2>Create Review</h2>
   <form [formGroup]="postForm">
 
-    <img class="post-image" [src]="previewImgURL || 'https://www.missingdogsuk.co.uk/wp-content/plugins/wp-job-manager-resumes/assets/images/candidate.png'" alt="user image">
+    <img class="post-image"
+         [src]="previewImgURL || 'https://www.missingdogsuk.co.uk/wp-content/plugins/wp-job-manager-resumes/assets/images/candidate.png'"
+         alt="user image">
 
     <input type="file"
            style="display: none"
@@ -15,20 +17,27 @@
 
     <button mat-button (click)="fileInput.click()">Pick File</button>
 
-    <mat-form-field class="w-100" appearance="outline">
+    <mat-form-field  class="w-100" appearance="outline">
       <mat-label>Title</mat-label>
       <input matInput
              formControlName="title">
     </mat-form-field>
-    <mat-form-field class="w-100" appearance="outline">
-      <mat-label>Caption</mat-label>
-      <input matInput
-             formControlName="caption">
+    <mat-form-field  class="w-100" appearance="outline">
+      <mat-label>Group</mat-label>
+      <mat-select formControlName="postgroup">
+        <mat-option value="Film">Film</mat-option>
+        <mat-option value="Game">Game</mat-option>
+        <mat-option value="Book">Book</mat-option>
+      </mat-select>
     </mat-form-field>
+
+
+
+
+
     <mat-form-field class="w-100" appearance="outline">
-      <mat-label>Location</mat-label>
-      <input matInput
-             formControlName="location">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
     </mat-form-field>
 
     <div style="text-align: right">

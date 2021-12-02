@@ -33,8 +33,8 @@ export class AddPostComponent implements OnInit {
   createPostForm(): FormGroup {
     return this.fb.group({
       title: ['', Validators.compose([Validators.required])],
-      caption: ['', Validators.compose([Validators.required])],
-      location: ['', Validators.compose([Validators.required])],
+      postgroup: ['', Validators.compose([Validators.required])],
+      tag: ['', Validators.compose([Validators.required])],
     });
   }
 
@@ -43,8 +43,8 @@ export class AddPostComponent implements OnInit {
     this.postService.createPost({
       id: 0,
       title: this.postForm.value.title,
-      caption: this.postForm.value.caption,
-      location: this.postForm.value.location
+      postgroup: this.postForm.value.postgroup,
+      tag: this.postForm.value.tag
     }).subscribe(data => {
       this.createdPost = data;
       console.log(data);

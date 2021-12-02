@@ -10,9 +10,11 @@ public class PostDTO {
     private Long id;
     private String username;
     private String title;
-    private String caption;
-    private String location;
+    private String postgroup;
+    private String tag;
+    private String review;
     private Integer likes;
-    private Set<String> likedUsers;
+    private Integer rating;
+    private Set<String> usersLiked;
 
 }

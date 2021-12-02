@@ -1,9 +1,9 @@
-export interface User{
-  id : number;
-  email : string;
-  username : string;
-  firstname : string;
-  lastname : string;
-  bio : string;
-  imageURL? : string;
+export interface User {
+  id: number;
+  email: string;
+  username: string;
+  firstname: string;
+  lastname: string;
+  bio: string;
+  imageURL?: string;
 }

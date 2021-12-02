@@ -16,6 +16,8 @@ import {ProfileComponent} from './user/profile/profile.component';
 import {UserPostsComponent} from './user/user-posts/user-posts.component';
 import {EditUserComponent} from './user/edit-user/edit-user.component';
 import {AddPostComponent} from './user/add-post/add-post.component';
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import {AddPostComponent} from './user/add-post/add-post.component';
     MaterialModule,
     HttpClientModule,
     FormsModule,
+    MatOptionModule,
+    MatSelectModule,
   ],
 
   providers: [authInterceptorProviders, authErrorInterceptorProviders],
