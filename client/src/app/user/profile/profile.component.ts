@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from '../../models/User';
+import {User} from '../../model/User';
 import {TokenStorageService} from '../../service/token-storage.service';
 import {PostService} from '../../service/post.service';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';

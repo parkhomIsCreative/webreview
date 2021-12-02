@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../../models/User';
+import {User} from '../../model/User';
 import {TokenStorageService} from '../../service/token-storage.service';
 import {UserService} from '../../service/user.service';
 import {Router} from '@angular/router';

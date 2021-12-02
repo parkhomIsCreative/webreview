@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Post} from '../../models/Post';
-import {User} from '../../models/User';
+import {Post} from '../../model/Post';
+import {User} from '../../model/User';
 import {PostService} from '../../service/post.service';
 import {UserService} from '../../service/user.service';
 import {CommentService} from '../../service/comment.service';
@@ -92,7 +92,7 @@ export class IndexComponent implements OnInit {
   postComment(message: string, postId: number, postIndex: number): void {
     const post = this.posts![postIndex];
     console.log(post);
-    this.commentService.addToCommentToPost(postId, message)
+    this.commentService.addCommentToPost(postId, message)
       .subscribe(data => {
         console.log(data);
         post.comments!.push(data);

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Post} from '../models/Post';
+import {Post} from '../model/Post';
 import {Observable} from 'rxjs';
 
 const POST_API = 'http://linensun.com:8080/api/post/';

@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {NotificationService} from '../../service/notification.service';
 import {UserService} from '../../service/user.service';
-import {User} from '../../models/User';
+import {User} from '../../model/User';
 
 @Component({
   selector: 'app-edit-user',

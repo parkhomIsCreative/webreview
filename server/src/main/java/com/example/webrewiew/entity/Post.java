@@ -38,7 +38,10 @@ public  class Post {
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "post", orphanRemoval = true)
+    @Column(nullable = false)
+    private String username;
+
+    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "post", orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
 
     @JsonFormat(pattern = "yyyy-mm-dd HH:mm:ss")

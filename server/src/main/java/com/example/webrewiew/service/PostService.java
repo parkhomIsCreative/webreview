@@ -45,6 +45,7 @@ public class PostService {
         MapperFacade mapper = factory.getMapperFacade();
         Post post = mapper.map(postDTO,Post.class);
         post.setUser(user);
+        post.setUsername(user.getUsername());
         post.setLikes(0);
 
         LOG.info("Saving post for user {}", user.getUsername());

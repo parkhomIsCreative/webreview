@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Post} from '../../models/Post';
+import {Post} from '../../model/Post';
 import {PostService} from '../../service/post.service';
 import {ImageUploadService} from '../../service/image-upload.service';
 import {NotificationService} from '../../service/notification.service';
