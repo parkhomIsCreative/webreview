@@ -4,7 +4,7 @@ export interface Post {
   id?: number;
   title: string;
   postgroup: string;
-  tag: string;
+  review: string;
   rating?: number;
   imageURL?: string;
   likes?: number;

@@ -18,6 +18,7 @@ import {EditUserComponent} from './user/edit-user/edit-user.component';
 import {AddPostComponent} from './user/add-post/add-post.component';
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {MatSelectModule} from "@angular/material/select";
     FormsModule,
     MatOptionModule,
     MatSelectModule,
+    CKEditorModule
   ],
 
   providers: [authInterceptorProviders, authErrorInterceptorProviders],

@@ -31,11 +31,8 @@
         <mat-option value="Book">Book</mat-option>
       </mat-select>
     </mat-form-field>
-    
-    <mat-form-field class="w-100" appearance="outline">
-      <mat-label>Textarea</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
+
+    <ckeditor formControlName="review" [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
 
     <div style="text-align: right">
       <button mat-flat-button color="primary" [disabled]="postForm.invalid" (click)="submit()">

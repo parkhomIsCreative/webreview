@@ -5,6 +5,7 @@ import {PostService} from '../../service/post.service';
 import {ImageUploadService} from '../../service/image-upload.service';
 import {NotificationService} from '../../service/notification.service';
 import {Router} from '@angular/router';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-add-post',
@@ -18,6 +19,8 @@ export class AddPostComponent implements OnInit {
   isPostCreated = false;
   createdPost!: Post;
   previewImgURL: any;
+
+  public Editor = ClassicEditor;
 
   constructor(private postService: PostService,
               private imageUploadService: ImageUploadService,
@@ -34,7 +37,7 @@ export class AddPostComponent implements OnInit {
     return this.fb.group({
       title: ['', Validators.compose([Validators.required])],
       postgroup: ['', Validators.compose([Validators.required])],
-      tag: ['', Validators.compose([Validators.required])],
+      review: ['', Validators.compose([Validators.required])],
     });
   }
 
@@ -44,7 +47,7 @@ export class AddPostComponent implements OnInit {
       id: 0,
       title: this.postForm.value.title,
       postgroup: this.postForm.value.postgroup,
-      tag: this.postForm.value.tag
+      review: this.postForm.value.review
     }).subscribe(data => {
       this.createdPost = data;
       console.log(data);

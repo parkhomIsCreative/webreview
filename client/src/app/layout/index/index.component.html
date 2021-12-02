@@ -3,7 +3,7 @@
     <mat-card-header style="text-align: left">
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{post.title}}</mat-card-title>
-      <mat-card-subtitle>{{post.tag}}</mat-card-subtitle>
+      <mat-card-subtitle>{{post.review}}</mat-card-subtitle>
     </mat-card-header>
     <img *ngIf="isImage" mat-card-image [src]="post.imageURL" alt="post image">
     <mat-card-subtitle align="start">Posted by {{post.username}}</mat-card-subtitle>
@@ -16,7 +16,7 @@
       <button *ngIf="isUserDataLoaded" mat-button (click)="likePost(post.id,i)"
               [ngClass]="post.usersLiked?.indexOf(user.username) != -1 ? 'is-liked' : 'not-liked'">
         <mat-icon>favorite</mat-icon>
-        Like{{post.usersLiked}}</button>
+        Like {{post.usersLiked}}</button>
     </mat-card-actions>
 
     <div style="text-align: left">
