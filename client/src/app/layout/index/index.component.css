@@ -1,5 +1,5 @@
 .index-page {
-  display: block;
+  display: flex;
   margin: 0 auto;
   width: 60%;
   padding-top: 3rem;

@@ -6,6 +6,7 @@ import {UserService} from '../../service/user.service';
 import {CommentService} from '../../service/comment.service';
 import {NotificationService} from '../../service/notification.service';
 import {ImageUploadService} from '../../service/image-upload.service';
+import {TokenStorageService} from '../../service/token-storage.service';
 
 @Component({
   selector: 'app-index',
@@ -13,9 +14,9 @@ import {ImageUploadService} from '../../service/image-upload.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-
-  isPostsLoaded = false;
   posts!: Post[];
+  isPostsLoaded = false;
+  isLoggedIn = false;
   isUserDataLoaded = false;
   user!: User;
   isImage = false;
@@ -24,11 +25,14 @@ export class IndexComponent implements OnInit {
               private userService: UserService,
               private commentService: CommentService,
               private notificationService: NotificationService,
-              private imageService: ImageUploadService
+              private imageService: ImageUploadService,
+              private tokenService: TokenStorageService
   ) {
   }
 
   ngOnInit(): void {
+    this.isLoggedIn = !!this.tokenService.getToken();
+
     this.postService.getAllPosts()
       .subscribe(data => {
         console.log(data);
@@ -38,6 +42,7 @@ export class IndexComponent implements OnInit {
         this.isPostsLoaded = true;
       });
 
+    if(this.isLoggedIn)
     this.userService.getCurrentUser()
       .subscribe(data => {
         console.log(data);

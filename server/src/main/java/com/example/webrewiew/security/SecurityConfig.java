@@ -50,6 +50,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers(SecurityConstants.SIGN_UP_URLS).permitAll()
+                .antMatchers(SecurityConstants.GET_POST_URL).permitAll()
+                .antMatchers(SecurityConstants.GET_IMAGE_URL).permitAll()
+                .antMatchers(SecurityConstants.GET_COMMENT_URL).permitAll()
                 .anyRequest().authenticated();
         http.addFilterBefore(new CorsFilter(), ChannelProcessingFilter.class);
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);

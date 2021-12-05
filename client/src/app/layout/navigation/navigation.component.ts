@@ -33,7 +33,7 @@ export class NavigationComponent implements OnInit {
 
   logout(): void {
     this.tokenService.logOut();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
 }
