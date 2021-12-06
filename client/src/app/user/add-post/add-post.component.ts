@@ -57,7 +57,7 @@ export class AddPostComponent implements OnInit {
           .subscribe(() => {
             this.notificationService.showSnackBar('Post created successfully');
             this.isPostCreated = true;
-            this.router.navigate(['/profile']);
+            this.router.navigate(['']);
           });
       }
     });
