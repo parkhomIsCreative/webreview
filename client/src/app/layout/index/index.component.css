@@ -1,7 +1,7 @@
 .index-page {
-  display: flex;
+  display: inline-block;
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   padding-top: 3rem;
 }
 

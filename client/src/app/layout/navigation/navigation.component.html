@@ -6,6 +6,9 @@
   <button *ngIf="!isLoggedIn" matTooltip="Login" routerLink="/login" mat-icon-button class="example-icon favorite-icon">
     <mat-icon>login</mat-icon>
   </button>
+  <button *ngIf="isLoggedIn" (click)="logout()" mat-icon-button class="example-icon favorite-icon">
+    <mat-icon>logout</mat-icon>
+  </button>
 
 
   <h3 *ngIf="isDataLoaded">{{this.user!.firstname}} {{this.user!.lastname}}</h3>

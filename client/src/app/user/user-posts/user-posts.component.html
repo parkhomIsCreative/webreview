@@ -9,7 +9,7 @@
     <mat-card-header style="text-align: left">
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{post.title}}</mat-card-title>
-      <mat-card-subtitle bind-innerHTML="post.review"></mat-card-subtitle>
+      <mat-card-subtitle style="text-align: left" bind-innerHTML="post.review"></mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="post.imageURL" alt="post image">
     <mat-card-content>
