@@ -1,10 +1,11 @@
 package com.example.webrewiew.payload.request;
 
 import lombok.Data;
+import lombok.Getter;
 
 import javax.validation.constraints.NotEmpty;
 
-@Data
+@Getter
 public class LoginRequest {
 
     @NotEmpty(message = "Username cannot be empty")
